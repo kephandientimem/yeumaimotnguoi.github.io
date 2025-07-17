@@ -83,6 +83,6 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   btnNo.addEventListener('click', () => {
-    alert('Thôi mà, bấm lại nút "Đồng ý" nhaaa~');
+    alert('Thôi mà, bấm lại nút "có" nhaaa~');
   });
 });
