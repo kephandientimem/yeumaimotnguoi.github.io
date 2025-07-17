@@ -9,12 +9,12 @@ document.addEventListener('DOMContentLoaded', function () {
   const btnNo = document.getElementById('btnNo');
 
   const lines = [
-    "Từ lần đầu gặp cậu, tớ đã biết tim mình không ổn.",
-    "Mỗi tin nhắn từ cậu làm tim tớ rung lên từng nhịp.",
-    "Tớ đã nghĩ mãi… liệu có nên nói điều này không.",
-    "Nhưng nếu không nói thì sẽ tiếc cả đời.",
-    "Nên hôm nay, tớ quyết định nói ra...",
-    "Tớ thích cậu!"
+    "anh yeu em",
+    "anh yeu emmmmmmm",
+    "em nốc cơm chưa?",
+    "dí",
+    "và anh muốn nói là...",
+    "anh yeu emmmmmm"
   ];
 
   let currentLine = 0;
