@@ -1,47 +1,146 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>tặng vợ yeuu</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MENU CAFE VIP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+      color: #333;
+      overflow-x: hidden;
+    }
+    header {
+      background: #222;
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px #00000066;
+      animation: fadeInDown 1.5s ease-out;
+    }
+    .menu-section {
+      padding: 2rem 5%;
+      animation: fadeInUp 1s ease;
+    }
+    h2 {
+      font-size: 2rem;
+      border-bottom: 2px solid #00000033;
+      padding-bottom: .5rem;
+      margin-top: 3rem;
+      color: #111;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      padding: .5rem 0;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px dashed #ccc;
+      animation: slideIn 0.5s ease forwards;
+    }
+    li:nth-child(even) {
+      background-color: #ffffffaa;
+    }
+    .price {
+      font-weight: bold;
+      color: #e74c3c;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideIn {
+      from { transform: translateX(-20px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+  </style>
 </head>
-
 <body>
-  <audio id="bgMusic" loop>
-    <source src="./music.mp3" type="audio/mp3" />
-  </audio>
+  <header>MENU CAFE VIP</header>
+  <div class="menu-section">
+    <h2>CÀ PHÊ PHA MÁY</h2>
+    <ul>
+      <li><span>1. Cà phê đen</span> <span class="price">13k</span></li>
+      <li><span>2. Cà phê sữa</span> <span class="price">15k</span></li>
+      <li><span>3. Cà phê muối</span> <span class="price">17k</span></li>
+      <li><span>4. Cà phê sữa tươi</span> <span class="price">20k</span></li>
+      <li><span>5. Cà phê bạc xỉu</span> <span class="price">20k</span></li>
+      <li><span>6. Cà phê sữa gấu</span> <span class="price">23k</span></li>
+      <li><span>7. Ca cao sữa đá</span> <span class="price">20k</span></li>
+    </ul>
 
-  <div id="intro" class="active">
-    <button id="startBtn">
-      anh có điều muốn nóiiiii<br/>Vợ nhấn vào đây điiii
-    </button>
+    <h2>SỮA CHUA LẮC</h2>
+    <ul>
+      <li><span>1. Sữa chua lắc dâu</span> <span class="price">25-30k</span></li>
+      <li><span>2. Sữa chua lắc xoài</span> <span class="price">25-30k</span></li>
+      <li><span>3. Sữa chua lắc việt quốc</span> <span class="price">25-30k</span></li>
+      <li><span>4. Sữa chua lắc đà</span> <span class="price">25-30k</span></li>
+      <li><span>5. Sữa chua dưa lưới</span> <span class="price">25-30k</span></li>
+      <li><span>6. Sữa chua đá</span> <span class="price">25-30k</span></li>
+    </ul>
+
+    <h2>MATCHALATTE</h2>
+    <ul>
+      <li><span>1. Dâu</span> <span class="price">20-25k</span></li>
+      <li><span>2. Xoài</span> <span class="price">20-25k</span></li>
+      <li><span>3. Việt quốc</span> <span class="price">20-25k</span></li>
+      <li><span>4. Đào</span> <span class="price">20-25k</span></li>
+      <li><span>5. Cacao</span> <span class="price">20-25k</span></li>
+      <li><span>6. Khoai môn</span> <span class="price">20-25k</span></li>
+      <li><span>7. Kem trứng</span> <span class="price">25-30k</span></li>
+      <li><span>8. Kem muối</span> <span class="price">25-30k</span></li>
+      <li><span>9. Chanh dây</span> <span class="price">20-25k</span></li>
+    </ul>
+
+    <h2>LATTE</h2>
+    <ul>
+      <li><span>1. Dâu</span> <span class="price">20-25k</span></li>
+      <li><span>2. Xoài</span> <span class="price">20-25k</span></li>
+      <li><span>3. Việt quốc</span> <span class="price">20-25k</span></li>
+      <li><span>4. Đào</span> <span class="price">20-25k</span></li>
+      <li><span>5. Cacao</span> <span class="price">20-25k</span></li>
+      <li><span>6. Khoai môn</span> <span class="price">20-25k</span></li>
+      <li><span>7. Chanh dây</span> <span class="price">20-25k</span></li>
+    </ul>
+
+    <h2>TRÀ SỮA</h2>
+    <ul>
+      <li><span>1. Thái xanh</span> <span class="price">20-25k</span></li>
+      <li><span>2. Kem trứng</span> <span class="price">25-30k</span></li>
+      <li><span>3. Truyền thống</span> <span class="price">20-25k</span></li>
+      <li><span>4. Khoai môn</span> <span class="price">20-25k</span></li>
+      <li><span>5. Kem muối</span> <span class="price">25-30k</span></li>
+    </ul>
+
+    <h2>TRÀ</h2>
+    <ul>
+      <li><span>1. Trà tắc</span> <span class="price">10-15k</span></li>
+      <li><span>2. Trà chanh</span> <span class="price">10-15k</span></li>
+      <li><span>3. Trà xoài</span> <span class="price">10-20k</span></li>
+      <li><span>4. Trà đào</span> <span class="price">20k</span></li>
+      <li><span>5. Trà dâu</span> <span class="price">20k</span></li>
+      <li><span>6. Trà việt quốc</span> <span class="price">20-25k</span></li>
+      <li><span>7. Trà chanh dây</span> <span class="price">20k</span></li>
+    </ul>
+
+    <h2>TOPPING (THÊM)</h2>
+    <ul>
+      <li><span>1. Trân châu</span> <span class="price">5k</span></li>
+      <li><span>2. Kem muối</span> <span class="price">5k</span></li>
+      <li><span>3. Kem trứng</span> <span class="price">5k</span></li>
+    </ul>
   </div>
-
-  <div id="mainContent">
-    <div id="line"></div>
-
-    <div id="final" class="final">
-      <p>em có yeu anh k 🥺</p>
-      <div class="button-group">
-        <button id="btnYes">có</button>
-        <button id="btnNo">không</button>
-      </div>
-    </div>
-
-    <div id="msgYes" class="yesContent">
-      <h1>Cảm ơn cậu đã đồng ý!</h1>
-      <div class="gif_container">
-        <img
-          src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmo3c3l5ODh3ZGN6NHhhaDE2Mjg1ZjkwOXczdTFxbWM3dTBtaW9zaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/9XY4f3FgFTT4QlaYqa/giphy.gif"
-          alt="Cute Gif" />
-      </div>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
 </body>
-
 </html>
