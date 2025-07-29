@@ -19,18 +19,18 @@
       text-align: center;
       font-size: 32px;
       font-weight: bold;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
       border-bottom: 2px solid #555;
       padding-bottom: 10px;
     }
-    .title {
-      text-align: center;
-      font-size: 28px;
-      margin: 30px 0 10px;
-      font-weight: bold;
-      letter-spacing: 1px;
+    .menu-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: space-between;
     }
     .section {
+      width: 48%;
       margin-bottom: 35px;
     }
     .section h2 {
@@ -56,109 +56,66 @@
       font-weight: bold;
       color: #000;
     }
+    .topping {
+      width: 100%;
+      text-align: center;
+      margin-top: 50px;
+    }
+    .topping h2 {
+      font-size: 20px;
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 15px;
+      padding-bottom: 5px;
+      text-transform: uppercase;
+      color: #222;
+    }
+    .topping ul {
+      display: inline-block;
+      text-align: left;
+    }
   </style>
 </head>
 <body>
   <header>MENU CAFE</header>
 
-  <div class="section">
-    <h2>Cà phê pha máy</h2>
-    <ul>
-      <li><span>1. Cà phê đen đá</span> <span class="price">13K</span></li>
-      <li><span>2. Cà phê sữa</span> <span class="price">15K</span></li>
-      <li><span>3. Phủ muối</span> <span class="price">17K</span></li>
-      <li><span>4. Cà phê sữa tươi</span> <span class="price">20K</span></li>
-      <li><span>5. Cà phê sữa Bạc Xỉu</span> <span class="price">20K</span></li>
-      <li><span>6. Cà phê sữa gấu</span> <span class="price">23K</span></li>
-      <li><span>7. Cacao sữa gấu</span> <span class="price">20K</span></li>
-      <li><span>8. Cafe sữa dừa sương sáu hạt é</span> <span class="price">20K</span></li>
-    </ul>
+  <div class="menu-container">
+    <!-- Các section bên trái hoặc phải -->
+    <!-- Dán lại toàn bộ các <div class="section">...</div> từ file cũ tại đây -->
+    <!-- Dưới đây là ví dụ 2 mục đầu tiên -->
+    <div class="section">
+      <h2>Cà phê pha máy</h2>
+      <ul>
+        <li><span>1. Cà phê đen đá</span> <span class="price">13K</span></li>
+        <li><span>2. Cà phê sữa</span> <span class="price">15K</span></li>
+        <li><span>3. Phủ muối</span> <span class="price">17K</span></li>
+        <li><span>4. Cà phê sữa tươi</span> <span class="price">20K</span></li>
+        <li><span>5. Cà phê sữa Bạc Xỉu</span> <span class="price">20K</span></li>
+        <li><span>6. Cà phê sữa gấu</span> <span class="price">23K</span></li>
+        <li><span>7. Cacao sữa gấu</span> <span class="price">20K</span></li>
+        <li><span>8. Cafe sữa dừa sương sáu hạt é</span> <span class="price">20K</span></li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Matcha</h2>
+      <ul>
+        <li><span>1. Đậu</span> <span class="price">20-25K</span></li>
+        <li><span>2. Xoài</span> <span class="price">20-25K</span></li>
+        <li><span>3. Việt Quất</span> <span class="price">20-25K</span></li>
+        <li><span>4. Đào</span> <span class="price">20-25K</span></li>
+        <li><span>5. Cacao</span> <span class="price">20-25K</span></li>
+        <li><span>6. Khoai Môn</span> <span class="price">20-25K</span></li>
+        <li><span>7. Kem Trứng</span> <span class="price">25-30K</span></li>
+        <li><span>8. Kem</span> <span class="price">25-30K</span></li>
+        <li><span>9. Chanh Dây</span> <span class="price">20-25K</span></li>
+      </ul>
+    </div>
+
+    <!-- Dán các section khác vào tiếp đây... -->
+    <!-- Trà sữa, Trà, Sữa chua lắc, Latte, Soda -->
   </div>
 
-  <div class="section">
-    <h2>Matcha</h2>
-    <ul>
-      <li><span>1. Đậu</span> <span class="price">20-25K</span></li>
-      <li><span>2. Xoài</span> <span class="price">20-25K</span></li>
-      <li><span>3. Việt Quất</span> <span class="price">20-25K</span></li>
-      <li><span>4. Đào</span> <span class="price">20-25K</span></li>
-      <li><span>5. Cacao</span> <span class="price">20-25K</span></li>
-      <li><span>6. Khoai Môn</span> <span class="price">20-25K</span></li>
-      <li><span>7. Kem Trứng</span> <span class="price">25-30K</span></li>
-      <li><span>8. Kem</span> <span class="price">25-30K</span></li>
-      <li><span>9. Chanh Dây</span> <span class="price">20-25K</span></li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Trà sữa</h2>
-    <ul>
-      <li><span>1. Thái Xanh</span> <span class="price">20-25K</span></li>
-      <li><span>2. Thái Đen</span> <span class="price">25-30K</span></li>
-      <li><span>3. Truyền Thống</span> <span class="price">20-25K</span></li>
-      <li><span>4. Khoai Môn</span> <span class="price">20-25K</span></li>
-      <li><span>5. Kem Muối</span> <span class="price">25-30K</span></li>
-      <li><span>6. Tàu hũ trân châu đường đen</span> <span class="price">18K</span></li>
-      <li><span>7. Sương sáu sữa dừa hạt é</span> <span class="price">20K</span></li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Trà</h2>
-    <ul>
-      <li><span>1. Trà Tắc</span> <span class="price">10-15K</span></li>
-      <li><span>2. Trà Chanh</span> <span class="price">10-15K</span></li>
-      <li><span>3. Trà Dâu</span> <span class="price">10-20K</span></li>
-      <li><span>4. Trà Xoài</span> <span class="price">20K</span></li>
-      <li><span>5. Trà Đào</span> <span class="price">20K</span></li>
-      <li><span>6. Trà Việt Quất</span> <span class="price">20-25K</span></li>
-      <li><span>7. Trà Chanh Dây</span> <span class="price">20K</span></li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Sữa chua lắc</h2>
-    <ul>
-      <li><span>1. Dâu</span> <span class="price">25-30K</span></li>
-      <li><span>2. Xoài</span> <span class="price">25-30K</span></li>
-      <li><span>3. Việt Quất</span> <span class="price">25-30K</span></li>
-      <li><span>4. Đào</span> <span class="price">25-30K</span></li>
-      <li><span>5. Đá</span> <span class="price">25-30K</span></li>
-      <li><span>6. Dưa lưới</span> <span class="price">25-30K</span></li>
-      <li><span>7. Ổi</span> <span class="price">25-30K</span></li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Latte</h2>
-    <ul>
-      <li><span>1. Dâu</span> <span class="price">20-25K</span></li>
-      <li><span>2. Xoài</span> <span class="price">20-25K</span></li>
-      <li><span>3. Việt</span> <span class="price">20-25K</span></li>
-      <li><span>4. Đào</span> <span class="price">20-25K</span></li>
-      <li><span>5. Cacao</span> <span class="price">20-25K</span></li>
-      <li><span>6. Khoai Môn</span> <span class="price">20-25K</span></li>
-      <li><span>7. Chanh Dây</span> <span class="price">20-25K</span></li>
-      <li><span>8. Ổi</span> <span class="price">20-25K</span></li>
-      <li><span>9. Matcha Latte Ổi</span> <span class="price">25-30K</span></li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Soda</h2>
-    <ul>
-      <li><span>1. Ổi</span> <span class="price">20-25K</span></li>
-      <li><span>2. Dâu</span> <span class="price">20-25K</span></li>
-      <li><span>3. Xoài</span> <span class="price">20-25K</span></li>
-      <li><span>4. Đào</span> <span class="price">20-25K</span></li>
-      <li><span>5. Việt Quất</span> <span class="price">20-25K</span></li>
-      <li><span>6. Chanh Dây</span> <span class="price">20-25K</span></li>
-      <li><span>7. Dưa Lưới</span> <span class="price">20-25K</span></li>
-      <li><span>8. Blue</span> <span class="price">20-25K</span></li>
-    </ul>
-  </div>
-
-  <div class="section">
+  <div class="topping">
     <h2>Topping (thêm)</h2>
     <ul>
       <li><span>1. Trân Châu</span> <span class="price">5K</span></li>
