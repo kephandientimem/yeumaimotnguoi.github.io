@@ -1,127 +1,505 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MENU CAFE</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Georgia', serif;
-      background: white;
-      color: #111;
-      padding: 40px;
-      line-height: 1.6;
-    }
-    header {
-      text-align: center;
-      font-size: 32px;
-      font-weight: bold;
-      margin-bottom: 30px;
-      border-bottom: 2px solid #555;
-      padding-bottom: 10px;
-    }
-    .menu-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      justify-content: space-between;
-    }
-    .section {
-      width: 48%;
-      margin-bottom: 35px;
-    }
-    .section h2 {
-      font-size: 20px;
-      border-bottom: 1px solid #ccc;
-      margin-bottom: 15px;
-      padding-bottom: 5px;
-      text-transform: uppercase;
-      color: #222;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    li {
-      display: flex;
-      justify-content: space-between;
-      padding: 6px 0;
-      border-bottom: 1px dashed #ccc;
-    }
-    .price {
-      font-weight: bold;
-      color: #000;
-    }
-    .topping {
-      width: 100%;
-      text-align: center;
-      margin-top: 50px;
-    }
-    .topping h2 {
-      font-size: 20px;
-      border-bottom: 1px solid #ccc;
-      margin-bottom: 15px;
-      padding-bottom: 5px;
-      text-transform: uppercase;
-      color: #222;
-    }
-    .topping ul {
-      display: inline-block;
-      text-align: left;
-    }
-  </style>
-</head>
-<body>
-  <header>MENU CAFE</header>
+<!doctype html>
 
-  <div class="menu-container">
-    <!-- Các section bên trái hoặc phải -->
-    <!-- Dán lại toàn bộ các <div class="section">...</div> từ file cũ tại đây -->
-    <!-- Dưới đây là ví dụ 2 mục đầu tiên -->
-    <div class="section">
-      <h2>Cà phê pha máy</h2>
-      <ul>
-        <li><span>1. Cà phê đen đá</span> <span class="price">13K</span></li>
-        <li><span>2. Cà phê sữa</span> <span class="price">15K</span></li>
-        <li><span>3. Phủ muối</span> <span class="price">17K</span></li>
-        <li><span>4. Cà phê sữa tươi</span> <span class="price">20K</span></li>
-        <li><span>5. Cà phê sữa Bạc Xỉu</span> <span class="price">20K</span></li>
-        <li><span>6. Cà phê sữa gấu</span> <span class="price">23K</span></li>
-        <li><span>7. Cacao sữa gấu</span> <span class="price">20K</span></li>
-        <li><span>8. Cafe sữa dừa sương sáu hạt é</span> <span class="price">20K</span></li>
-      </ul>
-    </div>
+<html lang="vi"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" /><title>DienThoaiVui.net</title><style>
+  
+:root {
+  
+  --accent:#e60012;
+  
+  --bg:#f6f7fb;
+  
+  --card:#fff;
+  
+}
+  
+*{box-sizing:border-box}
+  
+body{margin:0;font-family:"Inter",system-ui,Arial;background:var(--bg);color:#0f172a}
+  
+a{color:inherit;text-decoration:none}
+  
 
-    <div class="section">
-      <h2>Matcha</h2>
-      <ul>
-        <li><span>1. Đậu</span> <span class="price">20-25K</span></li>
-        <li><span>2. Xoài</span> <span class="price">20-25K</span></li>
-        <li><span>3. Việt Quất</span> <span class="price">20-25K</span></li>
-        <li><span>4. Đào</span> <span class="price">20-25K</span></li>
-        <li><span>5. Cacao</span> <span class="price">20-25K</span></li>
-        <li><span>6. Khoai Môn</span> <span class="price">20-25K</span></li>
-        <li><span>7. Kem Trứng</span> <span class="price">25-30K</span></li>
-        <li><span>8. Kem</span> <span class="price">25-30K</span></li>
-        <li><span>9. Chanh Dây</span> <span class="price">20-25K</span></li>
-      </ul>
-    </div>
+  
+/* HEADER */
+  
+header{
+  
+  background:#fff;
+  
+  border-bottom:1px solid #e6e6e9;
+  
+  position:sticky;
+  
+  top:0;
+  
+  z-index:50;
+  
+  box-shadow:0 2px 6px rgba(0,0,0,0.05);
+  
+}
+  
+.top{
+  
+  max-width:1200px;
+  
+  margin:auto;
+  
+  display:flex;
+  
+  align-items:center;
+  
+  gap:12px;
+  
+  padding:14px 18px;
+  
+}
+  
+.logo{font-weight:800;color:var(--accent);font-size:22px;letter-spacing:0.3px}
+  
+nav.menu{display:flex;flex-direction:row;gap:18px;margin-left:20px;white-space:nowrap}
+  
+nav.menu a{display:inline-block;padding:8px 12px;border-radius:6px;font-weight:600;color:#111;transition:0.25s}
+  
+nav.menu a:hover, nav.menu a.active{background:var(--accent);color:#fff}
+  
 
-    <!-- Dán các section khác vào tiếp đây... -->
-    <!-- Trà sữa, Trà, Sữa chua lắc, Latte, Soda -->
-  </div>
+  
+.search{flex:1;display:flex;align-items:center;gap:8px;margin-left:14px}
+  
+.search input{flex:1;padding:8px 12px;border-radius:8px;border:1px solid #e3e3e8;outline:none;transition:0.25s}
+  
+.search input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(230,0,18,0.2)}
+  
 
-  <div class="topping">
-    <h2>Topping (thêm)</h2>
-    <ul>
-      <li><span>1. Trân Châu</span> <span class="price">5K</span></li>
-      <li><span>2. Kem Muối</span> <span class="price">5K</span></li>
-      <li><span>3. Kem Trứng</span> <span class="price">5K</span></li>
-    </ul>
-  </div>
-</body>
-</html>
+  
+.icons{display:flex;gap:12px;align-items:center}
+  
+.pill{background:#fff;padding:8px 12px;border-radius:8px;border:1px solid #eee;font-weight:600;display:flex;align-items:center;gap:6px}
+  
+.pill#cartCount{position:relative}
+  
+.pill#cartCount::after{
+  
+  content:attr(data-count);
+  
+  position:absolute; top:-6px; right:-6px;
+  
+  background:var(--accent); color:#fff;
+  
+  font-size:12px; font-weight:700;
+  
+  width:20px; height:20px; border-radius:50%;
+  
+  display:flex; align-items:center; justify-content:center;
+  
+  transform:scale(0); transition:0.3s;
+  
+}
+  
+.pill#cartCount[data-count]:not([data-count="0"])::after{transform:scale(1)}
+  
+i
+  
+main{max-width:1200px;margin:20px auto;padding:0 12px}
+  
+.page-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+  
+
+  
+.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;  }
+  
+.card{background:var(--card);padding:12px;border-radius:10px;border:1px solid #eee;text-align:center;transition:transform .25s ease, box-shadow .25s ease;user-select:none;-webkit-tap-highlight-color: transparent;}
+  
+.card:hover{transform:translateY(-6px);box-shadow:0 8px 24px rgba(0,0,0,0.12)}
+  
+.thumb{width:100%;height:200px;border-radius:8px;background-size:contain;background-repeat:no-repeat;background-position:center;margin:0 auto;transition:transform .3s ease}
+  
+.card:hover .thumb{transform:scale(1.05)}
+  
+.name{font-weight:700;margin-top:10px;font-size:15px}
+  
+.price{margin-top:6px;font-size:16px}
+  
+
+  
+.btn.primary{background:var(--accent);color:#fff;padding:8px 12px;border:none;border-radius:8px;cursor:pointer;margin-top:10px}
+  
+.btn.primary:hover{opacity:0.85}
+  
+
+  
+.pagination{display:flex;gap:8px;justify-content:center;margin-top:20px}
+  
+.btn.ghost{background:#fff;border:1px solid #eee;padding:8px 12px;border-radius:8px;cursor:pointer;font-weight:600}
+  
+.btn.ghost:hover{opacity:0.85}
+  
+
+  
+#overlay {
+  
+  display: none;
+  
+  position: fixed;
+  
+  top: 0; left: 0;
+  
+  width: 100%; height: 100%;
+  
+  background: rgba(0, 0, 0, 0.897);
+  
+  z-index:90;
+  
+}
+  
+
+  
+#detailBox {
+  
+  display: none;
+  
+  position: fixed;
+  
+  top: 50%; 
+  
+  left: 50%;
+  
+  transform: translate(-50%, -50%);
+  
+  width: 600px;
+  
+  background: #fff;
+  
+  border: 3px solid var(--accent);
+  
+  border-radius: 18px;
+  
+  padding: 20px;
+  
+  z-index: 100;
+  
+  box-shadow: 0 0 20px rgba(230,0,18,0.6), 0 8px 24px rgba(0, 0, 0, 0.2);
+  
+  animation: glowBorder 2s infinite alternate;
+  
+}
+  
+
+  
+@keyframes glowBorder {
+  
+  0% {
+  
+    box-shadow: 0 0 500px rgb(255, 0, 21), 0 8px 24px rgba(0,0,0,0.2);
+  
+    border-color: red;
+  
+  }
+  
+  50% {
+  
+    box-shadow: 0 0 2000px rgb(255, 0, 21), 0 8px 24px rgba(0,0,0,0.2);
+  
+    border-color: red
+  
+  }
+  
+  100% {
+  
+    box-shadow: 0 0 1000px rgb(255, 0, 21), 0 8px 24px rgba(0,0,0,0.2);
+  
+    border-color: red;
+  
+  }
+  
+}
+  
+
+  
+#detailBox #closeDetail{
+  
+  float:right;
+  
+  padding:6px 12px;
+  
+  cursor:pointer;
+  
+  border:none;
+  
+  border-radius:8px;
+  
+  background:#e60012;
+  
+  color:#fff;
+  
+  font-weight:600;
+  
+  transition:0.2s;
+  
+}
+  
+#detailBox #closeDetail:hover{
+  
+  background:#ff1a3c;
+  
+}
+  
+
+  
+#infoBox {
+  
+  border-top: 3px solid var(--accent);
+  
+  padding: 10px;
+  
+  text-align: left;
+  
+  background: #222;
+  
+  color: #fff;
+  
+  font-family: Arial, sans-serif;
+  
+}
+  
+#infoBox .line1 {
+  
+  color: #fff;
+  
+  font-weight: bold;
+  
+}
+  
+#infoBox .line2 {
+  
+  color: #8f8f8f;
+  
+  font-size: 0.8em;
+  
+}
+  
+
+  
+@media(max-width:1000px){.product-grid{grid-template-columns:repeat(2,1fr)}}
+  
+@media(max-width:640px){.product-grid{grid-template-columns:1fr}}
+  
+</style></head><body><header>  <div class="top"><div style="display:flex;align-items:center;gap:12px">
+
+  <div class="logo">DienThoaiSieuCap.net</div>
+
+  <nav class="menu">
+
+    <a href="#/home" class="active">Trang chủ</a>
+
+    <a href="#/products">Sản phẩm</a>
+
+    <a href="#/brands">Hãng</a>
+
+    <a href="#/cart">Giỏ hàng</a>
+
+    <a href="#/checkout">Thanh toán</a>
+
+    <a href="#/about">Về chúng tôi</a>
+
+    <a href="#/contact">Liên hệ</a>
+
+  </nav>
+
+</div>
+
+<div class="search">
+
+  <input id="searchBox" placeholder="Tìm sản phẩm, model, thương hiệu...">
+
+  <button id="searchBtn" class="pill">Tìm</button>
+
+</div>
+
+<div class="icons">
+
+  <div id="cartCount" class="pill" data-count="0">🛒</div>
+
+</div>
+
+  </div></header><main id="app">  <section id="page-home" class="page"><div class="page-header"><h2>Sản phẩm nổi bật</h2></div>
+
+<div id="resultCount">0 sản phẩm</div>
+
+<div id="productGrid" class="product-grid"></div>
+
+<div class="pagination">
+
+  <button id="prevPage" class="btn ghost">« Trước</button>
+
+  <span id="pageInfo" style="padding:8px 10px;background:#fff;border:1px solid #eee;border-radius:6px;margin:0 8px">1 / 1</span>
+
+  <button id="nextPage" class="btn ghost"> »</button>
+
+</div>
+
+  </section></main><div id="overlay"></div><div id="detailBox"><button id="closeDetail">Đóng</button>
+
+  <div id="detailContent"></div></div><div id="infoBox">  <p><span class="line1">Chủ Tịch Của Tập Đoàn DienThoaiSieuCap.net: Nguyễn Thạch Hạo Phát 24cn1</span><br>
+
+<span class="line2">Địa chỉ: TRƯỜNG TRUNG CẤP BÁCH NGHỆ Tp. HCM Số 146 Đỗ Văn Dậy, X. Tân Hiệp, H. Hóc Môn, Tp. Hồ Chí Minh</span>
+
+  </p></div><script>
+  
+const products = [
+  
+  {name:"iPhone 17 Pro Max", price:37999000, img:"images/17promax.png", detail:`<h2>iPhone 17 Pro Max</h2><img src="images/17promax.png" style="width:300px;height:auto;display:block;margin:10px auto;"><p>Màn hình: 6.7 inch OLED</p><p>Chip: A17 Pro</p><p>Camera: 48MP, quay 8K</p><p>Pin: 4500mAh</p><p>Dung lượng: 1TB</p><p>Giá: 11.399.000 ₫</p>`},
+  
+  {name:"Samsung Galaxy S24 Ultra", price:26000000, img:"images/utra24.png", detail:`<h2>Samsung Galaxy S24 Ultra</h2><img src="images/utra24.png" style="width:300px;height:auto;display:block;margin:10px auto;"><p>Màn hình: 6.8 inch AMOLED</p><p>Chip: Snapdragon 8 Gen 3</p><p>Camera: 200MP + 12MP + 12MP</p><p>Pin: 5000mAh</p><p>Dung lượng: 12GB 1TB</p><p>Giá: 7.800.000 ₫</p>`},
+  
+  {name:"Oppo Reno 12", price:12000000, img:"images/opporeno12.png", detail:`<h2>Oppo Reno 12</h2><img src="images/opporeno12.png" style="width:300px;height:auto;display:block;margin:10px auto;"><p>Màn hình: 6.5 inch AMOLED</p><p>Chip: MediaTek Dimensity 9200</p><p>Camera: 50MP + 8MP + 2MP</p><p>Pin: 4500mAh</p><p>Dung lượng: 12GB 512GB</p><p>Giá: 12.000.000 ₫</p>`},
+  
+  {name:"Xiaomi 15 utra", price:15000000, img:"images/xiaomi15utra.png", detail:`<h2>Xiaomi 15 utra</h2><img src="images/xiaomi15utra.png" style="width:300px;height:auto;display:block;margin:10px auto;"><p>Màn hình: 6.36 inch AMOLED</p><p>Chip: Adreno 830</p><p>Camera: Chính 50 MP & Phụ 200 MP, 50 MP, 50 MP</p><p>Pin: 4500mAh</p><p>Dung lượng: 16 GB 512 GB</p><p>Giá: 15.000.000 ₫</p>`},
+  
+  {name:"Galaxy Z Flip7", price:16390000, img:"images/Galaxy Z Flip7.png", detail:`<h2>Galaxy Z Flip7</h2><img src="images/Galaxy Z Flip7.png" style="width:300px;height:auto;display:block;margin:10px auto;"><p>Màn hình: 6.9 inches AMOLED</p><p>Chip: Snapdragon 8 Gen 3</p><p>Camera: trước 10MP, F2.2 sau 50 MP, F1.8 + 12 MP, F2.2</p><p>Pin: 4300mAh</p><p>Dung lượng: 12 GB 256 GB</p><p>Giá: 15.000.000 ₫</p>`},
+  
+  {name:"samsung giá rẻ sinh viên", price:1000000, img:"images/samsung1.jpg", detail:`<h2>Samsung giá rẻ sinh viên</h2><img src="images/samsung1.jpg" style="width:100%;height:auto"><p>Màn hình: không rõ</p><p>Chip: không rõ</p><p>Camera: không rõ</p><p>Pin: không rõ</p><p>Giá: 300.000 ₫</p>`},
+  
+  {name:"iphone 11 pro max", price:15000000, img:"images/11promax.png", detail:`<h2>iphone 11 pro max</h2><img src="images/11promax.png" style="width:300px;height:auto;display:block;margin:10px auto;""><p>Màn hình: 6.36 inch AMOLED</p><p>Chip: Snapdragon 8 Gen 3</p><p>Camera: 50MP + 13MP</p><p>Pin: 4500mAh</p><p>Giá: 15.000.000 ₫</p>`},
+  
+  {name:"lenovo", price:15000000, img:"images/lenovo.png", detail:`<h2>lenovo</h2><img src="images/lenovo.png" style="width:300px;height:auto;display:block;margin:10px auto;"><p>Màn hình: 6.36 inch AMOLED</p><p>Chip: Snapdragon 8 Gen 3</p><p>Camera: 50MP + 13MP</p><p>Pin: 4500mAh</p><p>Giá: 15.000.000 ₫</p>`},
+  
+  {name:"samsung Galaxy A70", price:15000000, img:"images/samsunga70.png", detail:`<h2>samsung Galaxy A70</h2><img src="images/samsunga70.png" style="width:300px;height:auto;display:block;margin:10px auto;"><p>Màn hình: 6.36 inch AMOLED</p><p>Chip: Snapdragon 8 Gen 3</p><p>Camera: 50MP + 13MP</p><p>Pin: 4500mAh</p><p>Giá: 15.000.000 ₫</p>`},
+  
+  {name:"iPhone 16 Pro Max", price:15000000, img:"images/iphone16promax.png", detail:`<h2>iPhone 16 Pro Max</h2><img src="images/iphone16promax.png" style="width:300px;height:auto;display:block;margin:10px auto;"><p>Màn hình: 6.36 inch AMOLED</p><p>Chip: Snapdragon 8 Gen 3</p><p>Camera: 50MP + 13MP</p><p>Pin: 4500mAh</p><p>Giá: 15.000.000 ₫</p>`},
+  
+  {name:"iPhone 16e", price:15000000, img:"images/16e.png", detail:`<h2>iPhone 16e</h2><img src="images/16e.png" style="width:300px;height:auto;display:block;margin:10px auto;"><p>Màn hình: 6.36 inch AMOLED</p><p>Chip: Snapdragon 8 Gen 3</p><p>Camera: 50MP + 13MP</p><p>Pin: 4500mAh</p><p>Giá: 15.000.000 ₫</p>`},
+  
+  {name:"iPhone 17 pro", price:15000000, img:"images/17pro.png", detail:`<h2>iPhone 17 pro</h2><img src="images/17pro.png" style="width:300px;height:auto;display:block;margin:10px auto;"><p>Màn hình: 6.36 inch AMOLED</p><p>Chip: Snapdragon 8 Gen 3</p><p>Camera: 50MP + 13MP</p><p>Pin: 4500mAh</p><p>Giá: 15.000.000 ₫</p>`},
+  
+  {name:"iPhone 13 pro max", price:15000000, img:"images/13promax.png", detail:`<h2>iPhone 13 pro max</h2><img src="images/13promax.png" style="width:300px;height:auto;display:block;margin:10px auto;"><p>Màn hình: 6.36 inch AMOLED</p><p>Chip: Snapdragon 8 Gen 3</p><p>Camera: 50MP + 13MP</p><p>Pin: 4500mAh</p><p>Giá: 15.000.000 ₫</p>`},
+  
+  {name:"Xiaomi 14T Pro", price:15000000, img:"images/Xiaomi 14T Pro.png", detail:`<h2>Xiaomi 14T Pro</h2><img src="images/Xiaomi 14T Pro.png" style="width:300px;height:auto;display:block;margin:10px auto;"><p>Màn hình: 6.36 inch AMOLED</p><p>Chip: Snapdragon 8 Gen 3</p><p>Camera: 50MP + 13MP</p><p>Pin: 4500mAh</p><p>Giá: 15.000.000 ₫</p>`},
+  
+  {name:"Xiaomi Redmi 12", price:15000000, img:"images/Xiaomi Redmi 12 .png", detail:`<h2>Xiaomi Redmi 12</h2><img src="images/Xiaomi Redmi 12 .png" style="width:300px;height:auto;display:block;margin:10px auto;"><p>Màn hình: 6.36 inch AMOLED</p><p>Chip: Snapdragon 8 Gen 3</p><p>Camera: 50MP + 13MP</p><p>Pin: 4500mAh</p><p>Giá: 15.000.000 ₫</p>`},
+  
+  {name:"Reno14 F", price:15000000, img:"images/Reno14 F.png", detail:`<h2>Reno14 F</h2><img src="images/" style="width:300px;height:auto;display:block;margin:10px auto;"><p>Màn hình: 6.36 inch AMOLED</p><p>Chip: Snapdragon 8 Gen 3</p><p>Camera: 50MP + 13MP</p><p>Pin: 4500mAh</p><p>Giá: 15.000.000 ₫</p>`},
+  
+];
+  
+
+  
+let state = {products, productsPage:1, perPage:16};
+  
+
+  
+function getFilteredList(){return state.products.slice();}
+  
+
+  
+function renderProducts(){
+  
+  const grid = document.getElementById('productGrid');
+  
+  grid.innerHTML = '';
+  
+  const list = getFilteredList();
+  
+  const pages = Math.min(Math.ceil(list.length/state.perPage), 8);
+  
+  if(state.productsPage > pages) state.productsPage = pages;
+  
+  const start = (state.productsPage - 1) * state.perPage;
+  
+  const pageItems = list.slice(start, start + state.perPage);
+  
+
+  
+  document.getElementById('resultCount').textContent = `${list.length} sản phẩm`;
+  
+  document.getElementById('pageInfo').textContent = `${state.productsPage} / ${pages}`;
+  
+
+  
+  pageItems.forEach(p => {
+  
+    const discountedPrice = Math.round(p.price*0.3);
+  
+    const card = document.createElement('div');
+  
+    card.className = 'card';
+  
+    card.innerHTML = `
+  
+      <div class="thumb" style="background-image:url('${p.img}')"></div>
+  
+      <div class="name">${p.name}</div>
+  
+      <div class="price">
+  
+        <span style="text-decoration: line-through; color:red">${p.price.toLocaleString()} ₫</span><br>
+  
+        <span style="font-weight:bold; color:green">${discountedPrice.toLocaleString()} ₫</span>
+  
+      </div>
+  
+      <button class="btn primary">Chi tiết</button>
+  
+    `;
+  
+    card.querySelector('button').addEventListener('click', (e)=>{
+  
+      e.stopPropagation();
+  
+      document.getElementById('detailContent').innerHTML = p.detail;
+  
+      document.getElementById('detailBox').style.display = 'block';
+  
+      document.getElementById('overlay').style.display = 'block';
+  
+    });
+  
+    grid.appendChild(card);
+  
+  });
+  
+}
+  
+
+  
+document.getElementById('prevPage').onclick = ()=>{
+  
+  if(state.productsPage > 1){ state.productsPage--; renderProducts(); }
+  
+};
+  
+document.getElementById('nextPage').onclick = ()=>{
+  
+  const list = getFilteredList();
+  
+  let pages = Math.min(Math.ceil(list.length/state.perPage), 8);
+  
+  if(state.productsPage < pages){ state.productsPage++; renderProducts(); }
+  
+};
+  
+
+  
+document.getElementById('closeDetail').addEventListener('click', ()=>{
+  
+  document.getElementById('detailBox').style.display = 'none';
+  
+  document.getElementById('overlay').style.display = 'none';
+  
+});
+  
+
+  
+document.getElementById('overlay').addEventListener('click', ()=>{
+  
+  document.getElementById('detailBox').style.display = 'none';
+  
+  document.getElementById('overlay').style.display = 'none';
+  
+});
+  
+
+  
+renderProducts();
+  
+</script></body></html>
